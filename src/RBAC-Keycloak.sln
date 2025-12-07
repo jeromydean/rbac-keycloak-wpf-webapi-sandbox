@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeycloakConfigurationUtilit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFClientApplication", "WPFClientApplication\WPFClientApplication.csproj", "{EAACE20B-04C1-47DE-AD11-4B23BAEAC5E4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{1A15676F-7D89-4755-918A-3A57A206ED85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{EAACE20B-04C1-47DE-AD11-4B23BAEAC5E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAACE20B-04C1-47DE-AD11-4B23BAEAC5E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAACE20B-04C1-47DE-AD11-4B23BAEAC5E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A15676F-7D89-4755-918A-3A57A206ED85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A15676F-7D89-4755-918A-3A57A206ED85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A15676F-7D89-4755-918A-3A57A206ED85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A15676F-7D89-4755-918A-3A57A206ED85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
