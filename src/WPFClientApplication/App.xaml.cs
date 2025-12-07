@@ -2,6 +2,8 @@
 using System.Windows;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Identity.Client;
+using Microsoft.Identity.Client.Desktop;
 using WPFClientApplication.Views;
 
 namespace WPFClientApplication
@@ -37,6 +39,19 @@ namespace WPFClientApplication
       {
         serviceCollection.AddTransient(viewModelType);
       }
+
+      serviceCollection.AddSingleton<IPublicClientApplication>(sp =>
+      {
+        return PublicClientApplicationBuilder.Create("wpf-client")
+          .WithExperimentalFeatures()//required for .WithOidcAuthority
+
+          //https://localhost:8443/realms/rbac-application/protocol/saml/descriptor
+          //https://localhost:8443/realms/rbac-application/.well-known/openid-configuration
+          .WithOidcAuthority("https://localhost:8443/realms/rbac-application")
+          .WithDefaultRedirectUri()//http://localhost is used for the webview
+          .WithWindowsEmbeddedBrowserSupport()
+          .Build();
+      });
 
       return serviceCollection;
     }
